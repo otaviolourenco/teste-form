@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário Ex001</title>
+</head>
+<body>
+    <div class="form">
+        <form name="formulario" action="" id="formu">
+            <label for="user">Nome:</label>
+            <input type="text" name="user" class="txtForm" id="user" required oninput="validarNome()"><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" class="txtForm" id="email" required oninput="validarEmail()"><br>
+
+            <label for="psw">Senha:</label>
+            <input type="password" name="psw" class="txtForm" id="psw"> <br>
+            <span>A senha deve conter no mínimo 8 caráteres, 1 letra maiúscula e 1 caráter especial</span><br>
+
+            <input type="button" name="envio" value="Enviar" id="btn" onclick="validar(this.form)">
+
+        </form>
+    </div>
+
+</body>
+</html>
