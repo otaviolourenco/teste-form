@@ -31,7 +31,7 @@ function resp (nomeInp, cor) {
 // função validar nome
 function validarNome() {
     let user = document.getElementById('user').value;
-    let nomeValido = /^[a-z\d_]{4,15}$/i;
+    let nomeValido = /^[A-Z][a-z]+(?:[ ][A-Z][a-z]+)*$/;
 
     if (formulario.user.value == nomeValido) {
         console.log ('nome válido');
@@ -40,13 +40,14 @@ function validarNome() {
     }
 }
 
-// função validar nome
+// função validar email
 function validarEmail() {
     let email = document.getElementById('email');
     let emailValido = /^[a-z0-9-]+(\.[a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[az]{2,3})$/
 
-    if (formulario.email.value == emailValido) {
-        console.log ('email válido');
+    if (!emailValido.teste(formulario.email.value)) {
+        valido = 'n'
+        console.log ('email válido \n');
     } else {
         console.log ('email inválido');
     }
